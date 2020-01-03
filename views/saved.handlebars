@@ -18,12 +18,12 @@
     <div class="card-body">
       <ul>
         {{#each data}}
-        {{#unless saved}}
+        {{#if saved}}
         <ul>Title: {{title}}</ul>
         <ul> Link: {{link}} </ul>
         <ul> Summary: {{summary}}</ul>
-        <ul> <button class="save" data-id="{{_id}}">Save</button></ul>
-        {{/unless}}
+        <ul> <button class="addNote" data-id="{{_id}}">Add Note</button></ul>
+        {{/if}}
         {{/each}}
       </ul>
     </div>
