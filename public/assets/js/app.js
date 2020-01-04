@@ -36,6 +36,24 @@ $(document).on("click", ".save", function() {
       });
  
   });
+  $(document).on("click", ".deleteNote", function() {
+    console.log("clicked")
+       var thisId = $(this).attr("data-id");
+     console.log(thisId)
+       $.ajax({
+         method: "GET",
+         url: "/saved/" + thisId,
+      
+       })
+       
+         .then(function(data) {
+          
+           console.log(data);
+           location.reload();
+          
+         });
+    
+     });
   $(document).on("click", ".addNote", function() {
    
     $("#notes").empty();
