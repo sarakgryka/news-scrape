@@ -6,9 +6,8 @@
   </button>
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
     <div class="navbar-nav">
-      <button class="nav-item nav-link active" id="getArt">Get More Articles <span
-          class="sr-only">(current)</span></button>
-      <a class="nav-item nav-link" href="#">Saved</a>
+      
+      <a class="nav-item nav-link" href="/">Home</a>
 
     </div>
   </div>
@@ -22,8 +21,9 @@
         <ul>Title: {{title}}</ul>
         <ul> Link: {{link}} </ul>
         <ul> Summary: {{summary}}</ul>
-        <ul>Note: {{note}}</ul>
-        <ul> <button class="addNote" data-id="{{_id}}">Add Note</button></ul>
+    
+        <ul> <button class="addNote" data-id="{{_id}}">Add Note</button><button class="deleteNote" data-id="{{_id}}">Remove from Saved</button></ul>
+
         <ul> <div id="notes"></div></ul> 
     
         {{/if}}
