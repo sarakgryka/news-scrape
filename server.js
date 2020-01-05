@@ -12,7 +12,7 @@ app.set('view engine', 'handlebars');
 
 let db = require("./models");
 
-let PORT = 3000;
+let PORT = process.env.PORT || 3000;
 let MONGO_URI = process.env.MONGO_URI || "mongodb://localhost/mongoHeadlines"
 
 
