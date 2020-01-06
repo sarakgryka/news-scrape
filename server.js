@@ -13,7 +13,7 @@ app.set('view engine', 'handlebars');
 let db = require("./models");
 
 let PORT = process.env.PORT || 3000;
-let MONGO_URI = process.env.MONGO_URI || "mongodb://localhost/mongoHeadlines"
+let MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/mongoHeadlines"
 
 
 
@@ -23,7 +23,7 @@ app.use(express.json());
 
 app.use(express.static("public"));
 
-mongoose.connect(MONGO_URI, { useNewUrlParser: true });
+mongoose.connect(MONGODB_URI, { useNewUrlParser: true });
 
 app.get("/scrape", function (req, res) {
 
